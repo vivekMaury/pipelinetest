@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                bat 'build.bat'
+                bat '''g++ Even_Odd.cpp -o SomeName.exe'''
                 
             }
         }
