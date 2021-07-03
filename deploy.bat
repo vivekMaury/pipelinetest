@@ -1,0 +1,2 @@
+md Realease_Timestamp
+move SomeName.exe Realease_Timestamp
