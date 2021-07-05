@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                //bat build.bat
+                bat build.bat
                 
             }
         }
@@ -27,8 +27,7 @@ pipeline {
         }
         stage('Release') {
             steps {
-                echo 'Releasing'
-                            
+                echo 'Releasing'  
                 
             }
         }
