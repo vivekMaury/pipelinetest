@@ -10,7 +10,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                bat build.bat
+                bat '''start javaw -jar main.jar'''
+
                 
             }
         }
