@@ -24,7 +24,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying'
-                bat 'deploy.bat'
+               // bat 'deploy.bat'
             }
         }
         stage('Test') {
