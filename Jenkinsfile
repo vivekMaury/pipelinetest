@@ -14,6 +14,13 @@ pipeline {
                
             }
         }
+        
+        stage('Build') {
+            steps {
+                echo 'Building'
+                bat 'build.bat'  
+            }
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploying'
