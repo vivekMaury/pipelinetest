@@ -2,17 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-        stage('Build') {
-            steps {
-                echo 'Building'
-                bat '''start javaw -jar main.jar'''
-
-                
+       stage('Clear') {
+            steps { 
+               echo 'hello'
+               bat '''
+               for /f %%A in ('dir "D:\\JenkinsHome\\workspace\\PipelineOne\\[REALEASE]" /a-d-s-h /b ^| find /v /c ""') do set a=%%A
+               set File_count = %a%
+                if %a% == 10 (
+                del /q D:\\JenkinsHome\\workspace\\PipelineOne\\[REALEASE]\\Test* )
+                '''
+               
             }
         }
         stage('Deploy') {
