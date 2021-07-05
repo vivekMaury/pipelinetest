@@ -30,7 +30,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing '
-                bat 'pipelinetest.bat'
+               // bat 'pipelinetest.bat'
             }
         }
         stage('Release') {
